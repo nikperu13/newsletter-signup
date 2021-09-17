@@ -16,5 +16,14 @@
     "express": "^4.17.1",
     "nodemon": "^2.0.9",
     "request": "^2.88.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikperu13/newsletter-signup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nikperu13/newsletter-signup/issues"
+  },
+  "homepage": "https://github.com/nikperu13/newsletter-signup#readme"
 }
