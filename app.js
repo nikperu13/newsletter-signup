@@ -81,10 +81,13 @@ app.post("/failure", function(req,res){
     res.redirect("/");
 })
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Server is running on Heroku or port 3000.")
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port, ()=>{
+    console.log("Successfully started on server")
 });
-
  
 // API KEY
 // 47fb089f7b29e47ac77943136fe0956e-us6 :   ${dc} = us6
