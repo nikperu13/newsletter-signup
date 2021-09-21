@@ -2,6 +2,8 @@
 
 // Const modules (express, body-parser, https)
 
+
+require('dotenv').config()
 const express = require("express");
 const app = express();
 
@@ -44,7 +46,7 @@ app.post("/", function(req,res){
     const url = "https://us6.api.mailchimp.com/3.0/lists/dc2d721869";
     const options = {
         method: "POST",
-        auth: "nikperu12:47fb089f7b29e47ac77943136fe0956e-us6"
+        auth: "nikperu12:"+ process.env.API_KEY
     }
     
 
@@ -89,8 +91,3 @@ app.listen(port, ()=>{
     console.log("Successfully started on server")
 });
  
-// API KEY
-// 47fb089f7b29e47ac77943136fe0956e-us6 :   ${dc} = us6
-
-// List/Audience ID
-// dc2d721869
